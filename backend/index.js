@@ -3,6 +3,7 @@ const connectDB = require("./db_con/connection");
 const createstudentdata = require("./routes/createstudentdata");
 const login = require("./routes/login");
 const admindata = require("./routes/admindata");
+const sendmail = require('./controllers/adminmail')
 const profile = require("./routes/profile");
 const swagger = require('swagger-jsdoc');
 const swaggerui = require('swagger-ui-express');
@@ -72,5 +73,6 @@ app.use('/login', login)
 app.use('/createstudentdata', createstudentdata);
 app.use('/admindata', admindata);
 app.use('/profile', profile);
+app.use('/adminmail', sendmail);
 
 app.listen(3000, () => { console.log("on port 3000") });
