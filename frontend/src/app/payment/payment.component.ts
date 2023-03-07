@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CheckoutService } from '../services/payment.service';
 
 @Component({
   selector: 'app-payment',
@@ -8,6 +9,12 @@ import { Component } from '@angular/core';
 export class PaymentComponent {
 
   paymentHandler: any = null;
+
+  success: boolean = false
+  
+  failure:boolean = false
+
+  constructor(private checkout: CheckoutService) {}
 
   ngOnInit(){
     this.invokeStripe();
@@ -23,6 +30,17 @@ export class PaymentComponent {
       },
     });
     
+    const paymentstripe = (stripeToken: any) => {
+      this.checkout.makePayment(stripeToken).subscribe((data: any) => {
+        console.log(data);
+        if (data.data === "success") {
+          this.success = true
+        }
+        else {
+          this.failure = true
+        }
+      });
+    };
  
     paymentHandler.open({
       name: 'Red Apple',

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const log = require('../logger');
 
 const url = 'mongodb://localhost:27017/edutech';
 
@@ -11,7 +12,7 @@ async function getData() {
                 useUnifiedTopology: true
             }
         );
-        console.log("mongodb connected");
+        log.info("mongodb connected");
         console.log(`hostname: ${con.connection.host}`)
     }
     catch (err) {
