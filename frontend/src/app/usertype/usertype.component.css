@@ -1,0 +1,63 @@
+*{
+    padding : 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+  position: relative;
+  width: 20%;
+  height: 20%;
+  display: block;
+  border: 1px solid #d30c0c;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+  text-align: center;
+  translate: 1px 500px;
+}
+
+body,html{
+    height: 100%;
+}
+
+
+button{
+  border: none;
+  background-color: red;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: 70px;
+}
+
+button:active{
+
+  background-color: rgb(177, 28, 157);
+  
+  }
+  button:hover{
+
+    background-color: rgb(238, 187, 231);
+    
+    
+    }
+
+    a{
+      color: rgb(238, 219, 219);
+    }
+    a:hover{
+      color: rgb(48, 3, 3);
+    }
+    a:active{
+      color: rgb(48, 3, 3);
+    }
+
+    p{
+      margin: 20px;
+      color: red;
+    }
+    
+  
+

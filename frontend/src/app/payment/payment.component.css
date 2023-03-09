@@ -1,0 +1,26 @@
+.container{
+    position: relative;
+    width: 20%;
+    height: 20%;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    top: 90px;
+    left: 10px;
+    transform: translate(-10%,-90%);
+    border-radius: 10px;
+    text-align: center;
+    border-color: red;
+    translate: 10px 400px 100px;
+  }
+
+  button{
+    border-radius: 5px;
+    color: rgb(238, 223, 223);
+    background-color: red;
+    border-color: red;
+  }
+
+  p{
+    margin: 30px;
+  }
