@@ -8,6 +8,20 @@ import { Component } from '@angular/core';
 })
 export class AdminloginComponent {
 
+  email: string ="";
+  password : string ="";
+
+  login(){
+    let bodyData = 
+    {
+      "email" : this.email,
+      "password" : this.password
+
+    }
+
+    console.log(bodyData);
+  }
+
   
 
 }

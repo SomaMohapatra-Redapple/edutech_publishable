@@ -9,9 +9,13 @@ const profile = require("./routes/profile");
 const swagger = require('swagger-jsdoc');
 const swaggerui = require('swagger-ui-express');
 const logger = require('./logger');
+const showcategories = require('./routes/showcategories')
 
 const app = express();
 connectDB();
+
+var cors = require("cors");
+app.use(cors());
 
 
 const options = {
@@ -76,5 +80,6 @@ app.use('/createstudentdata', createstudentdata);
 app.use('/admindata', admindata);
 app.use('/profile', profile);
 app.use('/adminmail', sendmail);
+app.use('/showcategories', showcategories);
 
 app.listen(3000, () => { logger.info("on port 3000") });

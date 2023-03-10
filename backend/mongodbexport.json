@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "640b1bf57e6944e9041d0a89"
+  },
+  "name": "Interview",
+  "children": []
+},{
+  "_id": {
+    "$oid": "640b1bf57e6944e9041d0a8a"
+  },
+  "name": "Main",
+  "children": [
+    "GS-I",
+    "GS-II",
+    "Optionals"
+  ]
+},{
+  "_id": {
+    "$oid": "640b1bf57e6944e9041d0a8b"
+  },
+  "name": "CSAT",
+  "children": [
+    "CSAT-I",
+    "CSAT-II"
+  ]
+},{
+  "_id": {
+    "$oid": "640b1bf57e6944e9041d0a8c"
+  },
+  "name": "UPSC",
+  "children": [
+    "CSAT",
+    "Main",
+    "Interview"
+  ]
+}]
