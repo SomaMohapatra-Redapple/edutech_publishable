@@ -2,6 +2,8 @@ var nodemailer = require('nodemailer')
 
 const sendmail = async (req, res) => {
 
+    res.json({msg :"you are in admin mail page"});
+
     var transporter = await nodemailer.createTransport({
         service: 'e-mail',
         host: 'smtp.gmail.com',

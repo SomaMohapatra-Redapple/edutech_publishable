@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GetcategoriesService } from '../services/getcategories.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categories',
@@ -10,7 +11,7 @@ export class CategoriesComponent {
 
   catResponse : any;
 
-  constructor(private getcategory : GetcategoriesService){}
+  constructor(private getcategory : GetcategoriesService,private router : Router){}
   getCategories(){
     this.getcategory.getcategories().subscribe((data) => {
       {
@@ -18,7 +19,13 @@ export class CategoriesComponent {
       } 
       console.log(data);
 
-    });
+    })
+
+    
   }
+
+  goToInterview(){
+    this.router.navigateByUrl("/interview");
+   } 
 
 }

@@ -23,5 +23,9 @@ export class HeaderComponent {
     this.router.navigateByUrl('/')
   }
 
+  goToCategories(){
+    this.router.navigateByUrl('/categories');
+  }
+
 
 }

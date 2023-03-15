@@ -1,0 +1,15 @@
+
+<button (click) = "getInterviewData()">Videos</button>
+
+
+<div class="container" *ngFor="let eachVideo of interview">
+    <div class="card" *ngFor="let video of eachVideo.videos">
+    <video width="320" height="240" controls >
+       
+       <source  src="https://youtu.be/https://youtu.be/{{video}}" type="video/mp4">
+       Your browser does not support the video tag.
+       
+     </video> 
+   </div>
+</div>
+

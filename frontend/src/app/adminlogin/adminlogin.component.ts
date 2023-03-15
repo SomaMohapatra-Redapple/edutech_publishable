@@ -11,6 +11,7 @@ export class AdminloginComponent {
   email: string ="";
   password : string ="";
 
+
   login(){
     let bodyData = 
     {
@@ -20,6 +21,12 @@ export class AdminloginComponent {
     }
 
     console.log(bodyData);
+  }
+
+  getUserValue(value:any){
+
+    console.log(value);
+
   }
 
   

@@ -25,8 +25,7 @@ const student_details = new Schema(
         required : true
     },
     dob : {
-        type : Date,
-        required : true
+        type : Date
     },
     email : {
         type : String

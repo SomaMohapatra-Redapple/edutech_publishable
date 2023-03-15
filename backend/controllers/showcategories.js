@@ -2,7 +2,6 @@ const log = require('../logger');
 const showcategory = require('../models/categories')
 
 const showcategories = async (req, res) => {
-    console.log("hello");
     var db;
     
     try{

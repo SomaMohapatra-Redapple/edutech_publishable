@@ -1,24 +1,27 @@
+
 const jwt = require('jsonwebtoken');
 const secretkey = 'SecretKey';
 
 const profile = (req, res) => {
 
-    jwt.verify(req.token, secretkey, (err, authdata) => {
-        if (err) {
-            res.send({ result: 'invalid token' })
+    console.log("hello in profile controller");
 
-        }
-        else {
-            res.send({
-                message: 'profile accessed',
-                authdata
+    jwt.verify(req.token,secretkey,(err,authData)=>{
+        if(err){
+            console.log(err);
+            res.send({result : "invalid token"})
+        }else{
+            console.log(success);
+            res.json({
+                message : "profile accessed",
+                authData
             })
-
         }
     })
 
-
-
+    console.log(req);
+    console.log(res);
+    
 }
 
 module.exports = profile;

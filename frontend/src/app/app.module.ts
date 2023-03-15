@@ -9,8 +9,10 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { UsertypeComponent } from './usertype/usertype.component';
 import { UserComponent } from './user/user.component';
 import { HeaderComponent } from './header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { CategoriesComponent } from './categories/categories.component';
+import { InterviewComponent } from './interview/interview.component';
+import { StudentLoginComponent } from './student-login/student-login.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { CategoriesComponent } from './categories/categories.component';
     UsertypeComponent,
     UserComponent,
     HeaderComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    InterviewComponent,
+    StudentLoginComponent
   ],
   imports: [
     BrowserModule,

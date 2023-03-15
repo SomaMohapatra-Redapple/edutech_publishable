@@ -10,6 +10,8 @@ const swagger = require('swagger-jsdoc');
 const swaggerui = require('swagger-ui-express');
 const logger = require('./logger');
 const showcategories = require('./routes/showcategories')
+const authtoken = require('./auth/auth');
+const showstudentbyphno = require('./routes/showstudentbyphno');
 
 const app = express();
 connectDB();
@@ -78,8 +80,9 @@ app.use('/login', login);
 app.use('/payment', payment);
 app.use('/createstudentdata', createstudentdata);
 app.use('/admindata', admindata);
-app.use('/profile', profile);
+app.use('/profile',authtoken, profile);
 app.use('/adminmail', sendmail);
 app.use('/showcategories', showcategories);
+app.use('/showstudentbyphno/:id',showstudentbyphno);
 
 app.listen(3000, () => { logger.info("on port 3000") });

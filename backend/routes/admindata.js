@@ -9,6 +9,6 @@ const app = express();
 
 
 
-router.route('/admindata').post(admindata);
+router.route('/admindata').get(admindata);
 
 module.exports = admindata;

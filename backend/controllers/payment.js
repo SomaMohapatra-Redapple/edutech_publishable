@@ -10,6 +10,8 @@ app.use(cors())
 
 const payment = async (req, res) => {
 
+  res.json({msg :"you are in payment page"});
+
     try {
         console.log(req.body);
         token = req.body.token

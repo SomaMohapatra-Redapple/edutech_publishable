@@ -1,1 +1,14 @@
+
+<div class="container">
 <button (click)="getCategories()">Categories</button>
+
+
+    <div class = "card" *ngFor="let cat of catResponse" >
+      {{ cat.children }} 
+      <img class="card" *ngFor="let image of cat.img" src="../../assets/{{image}}.jpg" alt="" (click)="goToInterview()">
+      <div class="card">{{cat.prevpaper}}</div>
+    </div>
+    
+  </div> 
+
+  
