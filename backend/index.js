@@ -14,6 +14,8 @@ const authtoken = require('./auth/auth');
 const showstudentbyphno = require('./routes/showstudentbyphno');
 const showcourses = require('./routes/showcourses');
 const showpartners = require('./routes/showpartners')
+const showtestimonials = require('./routes/showtestimonials');
+const showlevels = require('./routes/showlevels');
 
 const app = express();
 connectDB();
@@ -87,6 +89,8 @@ app.use('/adminmail', sendmail);
 app.use('/showcategories', showcategories);
 app.use('/showpartners', showpartners);
 app.use('/showcourses',showcourses );
+app.use('/showlevels',showlevels );
+app.use('/showtestimonials',showtestimonials );
 app.use('/showstudentbyphno/:id',showstudentbyphno);
 
 app.listen(3000, () => { logger.info("on port 3000") });
