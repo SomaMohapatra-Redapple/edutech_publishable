@@ -3,7 +3,24 @@
     "$oid": "640b1bf57e6944e9041d0a89"
   },
   "name": "Interview",
-  "children": []
+  "children": [
+    "Interview"
+  ],
+  "prevpaper": "previous year interviews",
+  "img": [
+    "interview"
+  ],
+  "videos": [
+    "dCpMq33Xni4",
+    "srIIm0lBeWo",
+    "xuMAMh6MJVA",
+    "oW2NHo1qnSQ",
+    "Kc-UdDZdFo8",
+    "wW0lj-X98ek",
+    "WH2mn8Sb6ig",
+    "7iVL_IaQwK8",
+    "yXF_SuNVW7c"
+  ]
 },{
   "_id": {
     "$oid": "640b1bf57e6944e9041d0a8a"
@@ -13,7 +30,12 @@
     "GS-I",
     "GS-II",
     "Optionals"
-  ]
+  ],
+  "img": [
+    "GS-I",
+    "GS-II"
+  ],
+  "prevpaper": "previous year GS-I,GS-II paper"
 },{
   "_id": {
     "$oid": "640b1bf57e6944e9041d0a8b"
@@ -22,7 +44,12 @@
   "children": [
     "CSAT-I",
     "CSAT-II"
-  ]
+  ],
+  "img": [
+    "CSAT-I",
+    "CSAT-II"
+  ],
+  "prevpaper": "previous year CSAT-I,CSAT-II paper"
 },{
   "_id": {
     "$oid": "640b1bf57e6944e9041d0a8c"

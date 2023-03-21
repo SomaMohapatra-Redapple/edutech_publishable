@@ -5,30 +5,30 @@ const Schema = mongoose.Schema;
 
 const categories = new Schema(
     {
-
         
-
-        name : {
-        type : String,
-        required : true
+    name : {
+    type : String,
+    required : true
     },
-    children : {
-        type : [String]
+    parent_id: {
+    type : String
     },
-    updated_by : {
+    created_by : {
         type : String
+            
+        },
+        created_at : {
+        type : String
+            
+        },
+    updated_by : {
+    type : String
         
     },
     updated_at : {
-        type : String
+    type : String
         
-    },
-    status : {
-        type : String
-        
-    }
-
-},{ timestamps : true }
+    }},{ timestamps : true }
 );
 
 const Categories = mongoose.model('categorie', categories);
