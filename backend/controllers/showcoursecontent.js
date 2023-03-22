@@ -1,12 +1,12 @@
 const log = require('../logger');
-const course = require('../models/courses')
+const coursecontent = require('../models/coursecontent')
 
-const courses = async (req, res) => {
+const coursecontents = async (req, res) => {
     var db;
     
     try{
 
-    const result =  await course.find({},{__v:0});
+    const result =  await coursecontent.find({},{__v:0});
     console.log(result);
     res.send(result); 
     log.info(result);
@@ -19,4 +19,4 @@ const courses = async (req, res) => {
     
 }
 
-module.exports = courses;
+module.exports = coursecontents;
