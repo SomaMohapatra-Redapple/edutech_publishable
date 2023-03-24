@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const connectDB = require("./db_con/connection");
 const createstudentdata = require("./routes/createstudentdata");
@@ -26,13 +27,24 @@ const showotp = require('./routes/showotp')
 const show_course_target_audiences = require('./routes/show_course_target_audience')
 const show_course_objective =  require('./routes/show_course_objective')
 const show_course_prerequisite =  require('./routes/show_course_prerequisite')
+const show_subcategories =  require('./routes/show_subcategories')
+const get_subcategories_by_id =  require('./routes/get_subcategories_by_id')
+
+
+
 
 const app = express();
 connectDB();
 
 var cors = require("cors");
 app.use(cors());
-
+let port ;
+if (process.env.STATUS==='production')
+{port=process.env.PROD_PORT}
+else if(process.env.STATUS==='development')
+{port=process.env.DEV_PORT}
+else if(process.env.STATUS==='testing')
+{port=process.env.TEST_PORT}
 
 const options = {
     definition : {
@@ -44,7 +56,7 @@ const options = {
         servers:[
             
             {
-                url : 'http://localhost:3000/'
+                url : `http://192.168.1.57:${port}`
             }
         ]
 
@@ -113,6 +125,10 @@ app.use('/show_course_target_audiences',show_course_target_audiences );
 app.use('/showstudentbyphno/:id',showstudentbyphno);
 app.use('/show_course_objective',show_course_objective );
 app.use('/show_course_prerequisite',show_course_prerequisite );
+app.use('/show_subcategories',show_subcategories );
+app.use('/get_subcategories_by_id/:id',get_subcategories_by_id );
 
 
-app.listen(3000, () => { logger.info("on port 3000") });
+
+
+app.listen(port,"0.0.0.0", () => { logger.info("server is running on "+process.env.STATUS + " mode and listening on " + port) });

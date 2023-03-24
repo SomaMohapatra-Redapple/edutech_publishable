@@ -5,19 +5,21 @@ const course = new Schema(
     
       {
         "id": {
-          "type": "Date"
+          "type": "String"
         },
         "title": {
           "type": "String"
         },
         "category_id": {
-          "type": "Date"
+          type: Schema.Types.ObjectId,
+        ref: 'categories'
         },
         "subcategory_id": {
-          "type": "Date"
+          type: Schema.Types.ObjectId,
+        ref: 'sub_categories'
         },
         "instructor_id": {
-          "type": "Date"
+          "type": "String"
         },
         "language_id": {
           "type": "String"
