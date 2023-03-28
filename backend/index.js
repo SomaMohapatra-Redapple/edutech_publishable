@@ -103,6 +103,138 @@ app.use('/api-docs',swaggerui.serve,swaggerui.setup(swaggerspec))
  *      
  */
 
+/**
+ * @swagger
+ * /showcourse:
+ *  get:
+ *      summary: this api is used to get all courses
+ *      description: this api is used to show all courses
+ *      responses:
+ *                200 : 
+ *                      description : To test get method
+ *      
+ */
+
+
+/**
+ * @swagger
+ * /show_course_objective:
+ *  get:
+ *      summary: this api is used to get courses with course objective
+ *      description: this api is used to show all courses
+ *      responses:
+ *                200 : 
+ *                      description : To test get method
+ *      
+ */
+/**
+ * @swagger
+ * /show_course_prerequisite:
+ *  get:
+ *      summary: this api is used to get course prerequisite
+ *      description: this api is used to show course prerequisite
+ *      responses:
+ *                200 : 
+ *                      description : To test get method
+ *      
+ */
+
+/**
+ * @swagger
+ * /show_course_requirement:
+ *  get:
+ *      summary: this api is used to get course requirement
+ *      description: this api is used to show course requirement
+ *      responses:
+ *                200 : 
+ *                      description : To test get method
+ *      
+ */
+/**
+ * @swagger
+ * /show_course_target_audiences:
+ *  get:
+ *      summary: this api is used to get course target audiences
+ *      description: this api is used to show course target audiences
+ *      responses:
+ *                200 : 
+ *                      description : To test get method
+ *      
+ */
+
+/**
+ * @swagger
+ * /showotp:
+ *  get:
+ *      summary: this api is used to get otp
+ *      description: this api is used to show otp
+ *      responses:
+ *                200 : 
+ *                      description : To test get method
+ *      
+ */
+
+/**
+ * @swagger
+ * /showuser:
+ *  get:
+ *      summary: this api is used to get user
+ *      description: this api is used to show user
+ *      responses:
+ *                200 : 
+ *                      description : To test get method
+ *      
+ */
+
+/**
+ * @swagger
+ * /showaccountdetail:
+ *  get:
+ *      summary: this api is used to get accountdetail
+ *      description: this api is used to show accountdetail
+ *      responses:
+ *                200 : 
+ *                      description : To test get method
+ *      
+ */
+
+/**
+ * @swagger
+ * /usertype:
+ *  get:
+ *      summary: this api is used to get usertype
+ *      description: this api is used to show usertype
+ *      responses:
+ *                200 : 
+ *                      description : To test get method
+ *      
+ */
+
+/**
+ * @swagger
+ * /showlanguage:
+ *  get:
+ *      summary: this api is used to get showlanguage
+ *      description: this api is used to show showlanguage
+ *      responses:
+ *                200 : 
+ *                      description : To test get method
+ *      
+ */
+
+/**
+ * @swagger
+ * /get_subcategories_by_id/64193f10b8cd525a9dc59b8b:
+ *  get:
+ *      summary: this api is used to get subcategories by parent id
+ *      description: this api is used to get subcategories according to parent
+ *      responses:
+ *                200 : 
+ *                      description : To test get method
+ *      
+ */
+
+
 app.use('/login', login);
 app.use('/payment', payment);
 app.use('/createstudentdata', createstudentdata);
